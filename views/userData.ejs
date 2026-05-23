@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userData</title>
+</head>
+<body>
+        
+         <ul>
+        <li><%= user.title %></li>
+        <li><%= user.description %></li>
+        <li><%= user.price %></li>
+         <li><%= user.description %></li>
+
+        <li><%= user.price %> per night</li>
+        <br>
+       
+        <a href="/listing/delete/<%= user._id %>">
+  <button>Delete</button>
+</a>
+  <a href="/listing/update/<%= user._id %>">
+  <button>Update</button>
+</a>
+
+    </ul>
+</body>       
+</html>
