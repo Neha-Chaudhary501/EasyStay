@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wanderlust</title>
-</head>
+ <% layout("layout/boilerplate") %>
 <body>
        
     <h1>Wanderlust</h1>
@@ -20,19 +14,26 @@
   <button>New</button>
 </a>
 
-    <% data.forEach((listing) => { %>
-
-        <a href="/user/<%= listing._id %>">
-
-            <h2><%= listing.title %></h2>
+ <div class="row row-cols-lg-3 row-cols-md-2 wor-cols-sm-1">
         
-        </a>
+<% data.forEach((listing) => { %>
+<div class="card" style="width: 20rem;">
+  <img src="https://img.magnific.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="card-image">
+  <div class="card-body">
+    <h5 class="card-title"><%= listing.title %></h5>
+    <p class="card-text"><%=listing.description%></p>
+    <p class="card-text"><%=listing.price%>/day</p>
+    <a href="" class="btn btn-primary"></a>
+    <a href="/user/<%= listing._id %>">Go to full details</a>
+     
+  </div>
 
-       
-        <hr>
+</div>
+<% }) %>
+ </div>
 
-    <% }) %>
+
+
 
 </div>
 </body>
-</html>

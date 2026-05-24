@@ -1,0 +1,24 @@
+.f-info{
+    height:8rem;
+    background-color: burlywood;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+.f-info-social{
+    font-size: 1.2rem;
+}
+.f-info-links,.f-info-social{
+ width: 100%;
+}
+
+.f-info-links a{
+    text-decoration:none;
+    color: black;
+}
+.f-info-links a:hover{
+    text-decoration:underline;
+   
+}

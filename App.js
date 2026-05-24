@@ -7,10 +7,12 @@ const URL_DB="mongodb://127.0.0.1:27017/wanderlust";
 const Listing=require("./models/listing");
 const path=require("path");
 const methodOverride=require("method-override");
-
+const engine=require("ejs-mate");
+app.use(express.static(path.join(__dirname,"public")));
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({extended:true}));
 app.set("view engine","ejs");
+app.engine('ejs',engine);
 app.set("views",path.join(__dirname,"views"));  
 connectDB().then(()=>{
     console.log("Connected to DB");
@@ -59,6 +61,7 @@ res.redirect("/listings");
 
      app.post("/listing/new", async (req, res) => {
     let newListing = new Listing(req.body.listing); 
+
     console.log(req.body.listing);
     await newListing.save();
     res.redirect("/listings"); 

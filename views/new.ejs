@@ -1,25 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
-</head>
+<% layout("layout/boilerplate")%>
 <body>
-    <form method="POST" action="/listing/new" >
-          <input type="text" name="listing[title]" placeholder="Title"> 
+    <form method="POST" action="/listing/new"   class="row g-3 needs-validation" novalidate>
+          <input type="text" name="listing[title]" placeholder="Title" required> 
           <br> <br>
-          <textarea type="text" name="listing[description]" placeholder="Description"> </textarea>
+          <textarea type="text" name="listing[description]" placeholder="Description" required> </textarea>
           <br> <br>
-          <input type="number" name="listing[price]" placeholder="Price">  
+          <input type="number" name="listing[price]" placeholder="Price" required>  
           <br> <br>
-          <input type="text" name="listing[location]" placeholder="location">  
+          <input type="text" name="listing[location]" placeholder="location" required>  
           <br> <br>
-          <input type="text" name="country" placeholder="country"> 
+          <input type="text" name="listing[country]" placeholder="country" required> 
   
           <br> <br>
+          
+          <input type="text" name="listing[image]" placeholder="image"> 
+          <br><br>
           <button type="submit">Create Listing</button>
           </form>
 
 </body>
-</html>

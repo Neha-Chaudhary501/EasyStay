@@ -1,11 +1,5 @@
+<% layout("layout/boilerplate")%>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>update</title>
-</head>
 <body>
 
     <form method="POST" action="/listing/update/<%= listing._id %>?_method=PUT">
@@ -32,10 +26,13 @@
                value="<%= listing.country %>" 
                name="listing[country]"> 
         <br><br>
+          <input type="text" 
+               value="<%= listing.image %>" 
+               name="listing[image]"> 
+               <br><br>
 
         <button>Edit</button>
 
     </form>
 
 </body>
-</html>

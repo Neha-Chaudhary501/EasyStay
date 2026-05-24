@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>userData</title>
-</head>
+<% layout("layout/boilerplate")%>
+
 <body>
         
          <ul>
@@ -14,6 +9,7 @@
          <li><%= user.description %></li>
 
         <li><%= user.price %> per night</li>
+        <li><%= user.image  %></li>
         <br>
        
         <a href="/listing/delete/<%= user._id %>">
@@ -25,4 +21,3 @@
 
     </ul>
 </body>       
-</html>
