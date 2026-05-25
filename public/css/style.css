@@ -1,3 +1,12 @@
+body{
+    font-family:"Plus Jakarta Sans",sans-serif !important;
+    display:flex;
+    flex-direction:column;
+    min-height: 100vh;
+}
+.container{
+    flex:1;
+}
 .f-info{
     height:8rem;
     background-color: burlywood;
@@ -21,4 +30,8 @@
 .f-info-links a:hover{
     text-decoration:underline;
    
+}
+.add-btn{
+    background-color: rgb(101, 101, 231) !important;
+    border: none !important;
 }
